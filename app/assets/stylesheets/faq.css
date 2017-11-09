@@ -1,0 +1,21 @@
+<head>{
+  background-color: maroon;
+}
+<style>
+body {
+    background-color: maroon;
+}
+
+h1 {
+    color: gold;
+    text-align: center;
+}
+h3 {
+    color: gold;
+    text-align: center;
+}
+p {
+  font-weight: bold
+}
+</style>
+</head>
