@@ -35,9 +35,6 @@ gem 'jbuilder', '~> 2.5'
 # Use devise for auth
 gem 'devise'
 # Style it up with flavour
-gem 'bourbon'
-gem 'bitters'
-gem 'neat'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
