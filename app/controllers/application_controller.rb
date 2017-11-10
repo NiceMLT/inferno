@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     render "/faq"
   end
 
+  def about
+    render "/about"
+  end
+
 end

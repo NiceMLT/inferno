@@ -1,0 +1,19 @@
+<div class="">
+  <div class="">
+
+  </div>
+
+  <div class="">
+
+    <p> Name:
+      <%= @team.team_name %>
+    </p>
+
+    <p> Year:
+      <%= @team.team_year %>
+    </p>
+
+ </div>
+</div>
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
