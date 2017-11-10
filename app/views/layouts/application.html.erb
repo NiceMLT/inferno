@@ -11,7 +11,19 @@
   <body>
     <h1> Brookwood Ultimate </h1>
     <h3> Information about Brookwood High School's Ultimate Program </h3>
-    <iframe src="https://calendar.google.com/calendar/embed?src=96vqqmsgjibsfloauh31iesel8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+
+    <div class="">
+      <ul class="">
+        <li <%= add_class_if_active :faq %>> <%= link_to "FAQ", faq_path %> </li>
+        <li <%= add_class_if_active :calendar %> > <%= link_to "Calendar", calendar_path %> </li>
+        <li <%= add_class_if_active :about %> > <%= link_to "About", about_path %> </li>
+        <li <%= add_class_if_active :media %> > <%= link_to "Media", media_path %> </li>
+        <li <%= add_class_if_active :teams %> > <%= link_to "Teams", teams_path %> </li>
+      </ul>
+    </div>
+    <% unless current_page?('/calendar') %>
+      <iframe src="https://calendar.google.com/calendar/embed?src=96vqqmsgjibsfloauh31iesel8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+    <% end %>
     <%= yield %>
   </body>
 </html>

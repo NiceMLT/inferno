@@ -1,0 +1,33 @@
+<%= form_for(@team, html: { class: "form-horizontal", role: "form" } ) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="">
+    <%= f.label :team_name, class: "" %>
+    <div class="">
+      <%= f.text_field :team_name, class: "form-control" %>
+    </div>
+  </div>
+
+   <div class="">
+    <%= f.label :team_year, class: "" %>
+    <div class="">
+      <%= f.text_field :team_year, class: "" %>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="">
+      <%= f.submit nil, class: '' %>
+    </div>
+  </div>
+<% end %>
