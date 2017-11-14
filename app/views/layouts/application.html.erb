@@ -14,6 +14,7 @@
 
     <div class="">
       <ul class="">
+        <li <%= add_class_if_active :home %>> <%= link_to "Home", "/#" %> </li>
         <li <%= add_class_if_active :faq %>> <%= link_to "FAQ", faq_path %> </li>
         <li <%= add_class_if_active :calendar %> > <%= link_to "Calendar", calendar_path %> </li>
         <li <%= add_class_if_active :about %> > <%= link_to "About", about_path %> </li>
@@ -24,6 +25,8 @@
     <% unless current_page?('/calendar') %>
       <iframe src="https://calendar.google.com/calendar/embed?src=96vqqmsgjibsfloauh31iesel8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
     <% end %>
+
+    <a class="twitter-timeline" href="https://twitter.com/InfernoUltimate?ref_src=twsrc%5Etfw" data-width="300"data-height="300">Tweets by InfernoUltimate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <%= yield %>
   </body>
 </html>
