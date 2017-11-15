@@ -1,35 +1,37 @@
-<h1> Teams </h1>
+<div id="content">
+  <h2> Teams </h2>
 
-<h2> Ain't no teams yet </h2>
+  <h2> Ain't no teams yet </h2>
 
 
-<table class="">
-  <thead>
-    <tr>
-      <th> Team Name </th>
-      <th> Team Year </th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr data-show-path="<%= team_path(team) %>">
-        <td><%= team.team_name %></td>
-        <td><%= team.team_year %></td>
-       <td>
-          <%= link_to edit_team_path(team) do %>
-            <span class="" > </span>
-          <% end %>
-        </td>
-        <td>
-          <%= link_to team, method: :delete, data: { confirm: 'Fire Ze Missiles!' } do %>
-           <span class="" > </span>
-          <% end %>
-        </td>
+  <table class="">
+    <thead>
+      <tr>
+        <th> Team Name </th>
+        <th> Team Year </th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @teams.each do |team| %>
+        <tr data-show-path="<%= team_path(team) %>">
+          <td><%= team.team_name %></td>
+          <td><%= team.team_year %></td>
+         <td>
+            <%= link_to edit_team_path(team) do %>
+              <span class="" > </span>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to team, method: :delete, data: { confirm: 'Fire Ze Missiles!' } do %>
+             <span class="" > </span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
