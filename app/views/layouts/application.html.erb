@@ -9,10 +9,11 @@
   </head>
 
   <body>
-    <h1> Brookwood Ultimate </h1>
-    <h3> Information about Brookwood High School's Ultimate Program </h3>
-
-    <div class="">
+    <div id="header">
+      <h1 id="top-row"> Brookwood Ultimate </h1>
+      <h3 id="top-row"> Information about Brookwood High School's Ultimate Program </h3>
+    </div>
+    <div id="main">
       <ul class="">
         <li <%= add_class_if_active :home %>> <%= link_to "Home", "/#" %> </li>
         <li <%= add_class_if_active :faq %>> <%= link_to "FAQ", faq_path %> </li>
@@ -22,11 +23,13 @@
         <li <%= add_class_if_active :teams %> > <%= link_to "Teams", teams_path %> </li>
       </ul>
     </div>
-    <% unless current_page?('/calendar') %>
-      <iframe src="https://calendar.google.com/calendar/embed?src=96vqqmsgjibsfloauh31iesel8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-    <% end %>
+    <div id="right-bar">
+      <% unless current_page?('/calendar') %>
+        <iframe src="https://calendar.google.com/calendar/embed?src=96vqqmsgjibsfloauh31iesel8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+      <% end %>
 
-    <a class="twitter-timeline" href="https://twitter.com/InfernoUltimate?ref_src=twsrc%5Etfw" data-width="300"data-height="300">Tweets by InfernoUltimate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" href="https://twitter.com/InfernoUltimate?ref_src=twsrc%5Etfw" data-width="300"data-height="300">Tweets by InfernoUltimate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
     <%= yield %>
   </body>
 </html>
