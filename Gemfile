@@ -36,9 +36,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Style it up with flavour
 gem 'bourbon'
-
-
+gem 'neat'
 gem 'bitters'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
