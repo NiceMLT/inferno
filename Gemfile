@@ -39,6 +39,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 
+gem 'rake', '< 11' # Removes a method that rspec-core < 3.4 depends on
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
