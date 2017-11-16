@@ -15,23 +15,24 @@
 @import "bourbon";
 @import "neat/neat";
 @import "base/base";
+@import "config";
 
 #header{
-  background-color: #7c0f0e;
+  background-color: $primary-color;
   h1{
     text-align: center;
-    color: #c6b351;
+    color: $secondary-color;
     font-size: 30px;
     font-family: serif;
   }
   h3{
     text-align: center;
-    color: #c6b351;
+    color: $secondary-color;
   }
 }
 
 #main{
-  background-color: #c6b351;
+  background-color: $secondary-color;
   width: 70%;
   h2{
     text-align: center;
