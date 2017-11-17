@@ -8,6 +8,4 @@ Rails.application.routes.draw do
   get 'faq' => 'application#faq'
   get 'calendar' => 'application#calendar'
   get 'about' => 'application#about'
-  # get 'media' => 'application#media'
-  get 'teams' => 'application#teams'
 end
