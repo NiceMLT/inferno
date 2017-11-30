@@ -14,13 +14,27 @@
       <h3 id="top-row"> Information about Brookwood High School's Ultimate Program </h3>
     </div>
     <div id="main">
-      <ul class="">
-        <li <%= add_class_if_active :home %>> <%= link_to "Home", "/home" %> </li>
+      <ul>
+        <div id="nav-btns">
+          <%= button_to "Home", "/home", :method => :get %>
+          <%= button_to "FAQ", "/faq", :method => :get %>
+          <%= button_to "Calendar", "/calendar", :method => :get %>
+          <%= button_to "About", "/about", :method => :get %>
+          <%= button_to "Media", media_path, :method => :get %>
+          <%= button_to "Teams", teams_path, :method => :get %>
+        </div>
+        <button id="nav-btns" link_to "/home">Home </button>
+        <button id="nav-btns" link_to "/faq">FAQ </button>
+        <button id="nav-btns" link_to "/calendar">Calendar </button>
+        <button id="nav-btns" href="/about">About </button>
+        <button id="nav-btns" link_to media_path>Media </button>
+        <button id="nav-btns" link_to teams_path>Teams </button>
+        <!-- <li <%= add_class_if_active :home %>> <%= link_to "Home", "/home" %> </li>
         <li <%= add_class_if_active :faq %>> <%= link_to "FAQ", "/faq" %> </li>
         <li <%= add_class_if_active :calendar %> > <%= link_to "Calendar", "/calendar" %> </li>
         <li <%= add_class_if_active :about %> > <%= link_to "About", "/about" %> </li>
         <li <%= add_class_if_active :media %> > <%= link_to "Media", media_path %> </li>
-        <li <%= add_class_if_active :teams %> > <%= link_to "Teams", teams_path %> </li>
+        <li <%= add_class_if_active :teams %> > <%= link_to "Teams", teams_path %> </li> -->
       </ul>
     </div>
     <div id="right-bar">
