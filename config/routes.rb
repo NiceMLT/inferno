@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :teams
   resources :media, only: :index
   resources :strategies, only: :index
+  resources :partners, only: :index
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "/:page" => "homes#show"
