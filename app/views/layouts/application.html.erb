@@ -15,12 +15,13 @@
     </div>
     <div id="main">
       <ul class="">
-        <li <%= add_class_if_active :home %>> <%= link_to "Home", "/#" %> </li>
-        <li <%= add_class_if_active :faq %>> <%= link_to "FAQ", faq_path %> </li>
-        <li <%= add_class_if_active :calendar %> > <%= link_to "Calendar", calendar_path %> </li>
-        <li <%= add_class_if_active :about %> > <%= link_to "About", about_path %> </li>
-        <li <%= add_class_if_active :media %> > <%= link_to "Media", media_path %> </li>
-        <li <%= add_class_if_active :teams %> > <%= link_to "Teams", teams_path %> </li>
+        <a href="/home"><button type="button">Home</button></a>
+        <a href="/faq"><button type="button">FAQ</button></a>
+        <a href="/calendar"><button type="button">Calendar</button></a>
+        <a href="/about"><button type="button">About</button></a>
+        <a href="/media"><button type="button">Media</button></a>
+        <a href="/teams"><button type="button">Teams</button></a>
+        <a href="/partners"><button type="button">Partners</button></a>
       </ul>
     </div>
     <div id="right-bar">
@@ -30,6 +31,10 @@
 
       <a class="twitter-timeline" href="https://twitter.com/InfernoUltimate?ref_src=twsrc%5Etfw" data-width="400"data-height="400">Tweets by InfernoUltimate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
